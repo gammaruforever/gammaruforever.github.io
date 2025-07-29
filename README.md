@@ -12,3 +12,9 @@
 
 ### 테스트 명령어
 > npm run dev
+
+
+#### 트러블 슈팅 관련 자료
+
+> /games/~~ 들어가지 못하는 버그
+https://github.com/rafgraph/spa-github-pages?tab=readme-ov-file
