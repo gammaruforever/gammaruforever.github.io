@@ -27,7 +27,7 @@ function GameListPage() {
               >
                 <div className="game-list-contest-btn">
                   <h3>{season.label}</h3>
-                  <div style={{color: '#bbb', textAlign: 'center', fontSize: '0.95rem'}}>게임 리스트 보기</div>
+                  <div style={{color: '#bbb', textAlign: 'center', fontSize: '0.95rem'}}>출품작 보기</div>
                 </div>
               </Link>
             ))}

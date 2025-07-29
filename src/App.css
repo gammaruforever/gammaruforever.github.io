@@ -62,7 +62,7 @@ button:hover {
 .mainpage-top-btn {
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   margin: 18px 18px 0 0;
   background: #222a36;
   color: #f1f1f1;
