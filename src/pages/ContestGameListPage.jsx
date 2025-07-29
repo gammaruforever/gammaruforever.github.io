@@ -34,7 +34,7 @@ function ContestGameListPage() {
     setError(null)
     setLoading(true)
     // public 폴더 기준 상대경로 fetch (vite/react-scripts 환경)
-    fetch(`/dist/data/${year}/${season}.json`)
+    fetch(`dist/data/${year}/${season}.json`)
       .then(res => {
         if (!res.ok) throw new Error('데이터 파일이 없습니다.')
         return res.json()
@@ -80,7 +80,7 @@ function ContestGameListPage() {
                 src={game.imageUrl}
                 alt={game.title}
                 className="game-image"
-                onError={e => { e.target.onerror = null; e.target.src = '/dist/gammaruCharacter.png'; }}
+                onError={e => { e.target.onerror = null; e.target.src = 'dist/gammaruCharacter.png'; }}
               />
               <div className="game-info">
                 <h3>
