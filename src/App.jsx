@@ -6,7 +6,7 @@ import './App.css'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/games" element={<GameListPage />} />
