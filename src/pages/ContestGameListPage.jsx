@@ -34,7 +34,7 @@ function ContestGameListPage() {
     setError(null)
     setLoading(true)
     // public 폴더 기준 상대경로 fetch (vite/react-scripts 환경)
-    fetch(`./data/${year}/${season}.json`)
+    fetch(`/data/${year}/${season}.json`)
       .then(res => {
         if (!res.ok) throw new Error('데이터 파일이 없습니다.')
         return res.json()
