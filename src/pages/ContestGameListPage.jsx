@@ -90,9 +90,6 @@ function ContestGameListPage() {
                   {game.title}
                 </h3>
                 <div className="game-team">{game.team || '팀명 없음'}</div>
-                <div className="game-meta">
-                  <small>추가된 날짜: {game.createdAt ? new Date(game.createdAt).toLocaleDateString() : ''}</small>
-                </div>
                 <a
                   href={game.downloadUrl}
                   target="_blank"
@@ -103,7 +100,7 @@ function ContestGameListPage() {
                   aria-disabled={!isValidUrl(game.downloadUrl)}
                   onClick={e => { if (!isValidUrl(game.downloadUrl)) e.preventDefault(); e.stopPropagation(); }}
                 >
-                  {isValidUrl(game.downloadUrl) ? '다운로드' : '파일 분실'}
+                  {isValidUrl(game.downloadUrl) ? '다운로드' : '파일 없음'}
                 </a>
               </div>
             </div>

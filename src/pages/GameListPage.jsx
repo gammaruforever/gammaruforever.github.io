@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 import './GameListPage.css'
 
-const YEARS = Array.from({length: 2025-2016+1}, (_, i) => 2016 + i)
+const RECENT_YEAR = 2025;
+const YEARS = Array.from({length: RECENT_YEAR-2016+1}, (_, i) => RECENT_YEAR - i)
 const SEASONS = [
   { key: 'winter', label: '겨울공모전' },
   { key: 'summer', label: '여름공모전' }
