@@ -1,0 +1,220 @@
+.games-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.game-card {
+  background: #232a36;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #2d3748;
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+}
+
+.game-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  background: #181c24;
+}
+
+.game-info {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-info h3 {
+  margin: 0 0 10px 0;
+  color: #fff;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.game-info p {
+  margin: 0 0 15px 0;
+  color: #bbb;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: center;
+}
+
+.game-meta {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.game-meta small {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.download-btn {
+  display: inline-block;
+  background: #1e824c;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.2s;
+  margin-top: 10px;
+}
+
+.download-btn:hover {
+  background: #27ae60;
+}
+
+.medal-badge {
+  font-size: 1.5rem;
+  margin-right: 8px;
+  vertical-align: middle;
+  font-weight: bold;
+}
+.medal-badge.gold {
+  color: #FFD700;
+  text-shadow: 0 0 6px #FFD70099;
+}
+.medal-badge.silver {
+  color: #C0C0C0;
+  text-shadow: 0 0 6px #C0C0C099;
+}
+.medal-badge.bronze {
+  color: #CD7F32;
+  text-shadow: 0 0 6px #CD7F3299;
+}
+
+.game-creator {
+  color: #8ec6a5;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.game-team {
+  color: #8ec6a5;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.creator-multi {
+  color: #27ae60;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: 4px;
+}
+.creator-multi:focus {
+  outline: 2px solid #27ae60;
+}
+.creator-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.creator-modal {
+  background: #232a36;
+  border-radius: 10px;
+  padding: 24px 28px 24px 28px;
+  min-width: 260px;
+  max-width: 90vw;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+.popup-game-info {
+  padding: 0 0 0 0;
+  text-align: left;
+}
+.popup-game-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.popup-game-team {
+  color: #8ec6a5;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+.popup-game-creator {
+  color: #b2e0c7;
+  font-size: 1.02rem;
+  margin-bottom: 10px;
+}
+.popup-game-desc {
+  color: #eee;
+  font-size: 1.05rem;
+  margin-top: 12px;
+}
+.creator-modal ul {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0 0;
+}
+.creator-modal li {
+  margin-bottom: 8px;
+  font-size: 1.08rem;
+  color: #8ec6a5;
+}
+
+.game-desc-clickable {
+  color: #bbb;
+  cursor: pointer;
+  text-decoration: underline dotted;
+  transition: color 0.2s;
+}
+.game-desc-clickable:hover, .game-desc-clickable:focus {
+  color: #27ae60;
+  text-decoration: underline solid;
+}
+
+.game-card-clickable {
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.game-card-clickable:hover, .game-card-clickable:focus {
+  box-shadow: 0 8px 32px rgba(39,174,96,0.18);
+  transform: translateY(-3px) scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .games-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .game-info {
+    padding: 15px;
+  }
+} 

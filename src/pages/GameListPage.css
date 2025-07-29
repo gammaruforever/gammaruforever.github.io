@@ -1,0 +1,75 @@
+.game-list-page h2 {
+  color: #27ae60;
+  border-bottom: 1px solid #2d3748;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+.game-list-page h3 {
+  color: #1e824c;
+  text-align: center;
+}
+
+.game-list-page > div > div {
+  background: #181c24 !important;
+  border-radius: 10px;
+  border: 1px solid #181c24;
+  margin: 0 auto;
+}
+
+.game-list-page > div > div > div {
+  color: #bbb !important;
+  text-align: center;
+}
+
+.game-list-year-section {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.game-list-year-section > div {
+  background: #232a36 !important;
+  border-radius: 10px;
+  border: 1px solid #2d3748 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10) !important;
+}
+
+.game-list-contest-btn {
+  background: #232a36;
+  border-radius: 10px;
+  border: 1px solid #2d3748;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  padding: 28px 0 28px 0;
+  margin: 0 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, box-shadow 0.2s, border 0.2s, transform 0.15s;
+  cursor: pointer;
+}
+.game-list-contest-btn h3 {
+  color: #1e824c;
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  text-align: center;
+}
+.game-list-contest-btn:hover {
+  background: #283043;
+  border: 1.5px solid #27ae60;
+  box-shadow: 0 4px 16px rgba(39,174,96,0.10);
+  transform: translateY(-3px) scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .game-list-year-section {
+    flex-direction: column !important;
+    gap: 15px;
+    align-items: center;
+  }
+} 
