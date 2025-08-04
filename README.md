@@ -9,7 +9,8 @@
 > npm run dev
 
 ### 구글 드라이브 이미지를 넣을 때 방법
-
+> https:///d/**/
+> https://lh3.googleusercontent.com/d/1EPzXe4LFdxraxNx8nzY12Mjlk58LuARF
 
 -----
 

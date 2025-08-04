@@ -1,13 +1,68 @@
 [
   {
+    "id": 1,
+    "title": "",
+    "team": "",
+    "creator": "",
+    "description": "",
+    "imageUrl": "",
+    "downloadUrl": "",
+    "createdAt": "2025-07-29T12:00:00Z",
+    "rank": 0
+  },
+  {
     "id": 2,
-    "title": "Winter Puzzle",
-    "team": "윈터팀",
-    "creator": "홍길동",
-    "description": "겨울 공모전 출품작, 퍼즐 게임.",
-    "imageUrl": "https://via.placeholder.com/300x200?text=Winter+Puzzle",
-    "downloadUrl": "https://example.com/winter-puzzle.zip",
-    "createdAt": "2022-12-20T12:00:00Z",
+    "title": "",
+    "team": "",
+    "creator": "",
+    "description": "",
+    "imageUrl": "",
+    "downloadUrl": "",
+    "createdAt": "2025-07-29T12:00:00Z",
+    "rank": 0
+  },
+  {
+    "id": 3,
+    "title": "",
+    "team": "",
+    "creator": "",
+    "description": "",
+    "imageUrl": "",
+    "downloadUrl": "",
+    "createdAt": "2025-07-29T12:00:00Z",
+    "rank": 0
+  },
+  {
+    "id": 4,
+    "title": "",
+    "team": "",
+    "creator": "",
+    "description": "",
+    "imageUrl": "",
+    "downloadUrl": "",
+    "createdAt": "2025-07-29T12:00:00Z",
+    "rank": 0
+  },
+  {
+    "id": 5,
+    "title": "",
+    "team": "",
+    "creator": "",
+    "description": "",
+    "imageUrl": "",
+    "downloadUrl": "",
+    "createdAt": "2025-07-29T12:00:00Z",
+    "rank": 0
+  },
+  {
+    "id": 6,
+    "title": "",
+    "team": "",
+    "creator": "",
+    "description": "",
+    "imageUrl": "",
+    "downloadUrl": "",
+    "createdAt": "2025-07-29T12:00:00Z",
     "rank": 0
   }
-] 
+]
