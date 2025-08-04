@@ -77,7 +77,7 @@ function ContestGameListPage() {
               role="button"
             >
               <img
-                src={game.imageUrl}
+                src={(game.imageUrl)?game.imageUrl:"null"}
                 alt={game.title}
                 className="game-image"
                 onError={e => { e.target.onerror = null; e.target.src = '/gammaruCharacter.png'; }}
