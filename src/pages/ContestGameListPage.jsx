@@ -70,6 +70,7 @@ function ContestGameListPage() {
                   title: game.title,
                   team: game.team,
                   creator: game.creator,
+                  downloadUrl: game.downloadUrl,
                   desc: game.description
                 });
               }}
@@ -111,8 +112,62 @@ function ContestGameListPage() {
       <div className="popup-game-info">
         <div className="popup-game-title">{descModal.title}</div>
         <div className="popup-game-team">팀명: {descModal.team || '팀명 없음'}</div>
-        <div className="popup-game-creator">{Array.isArray(descModal.creator) ? `제작자: ${descModal.creator.join(', ')}` : descModal.creator ? `제작자: ${descModal.creator}` : ''}</div>
-        <div className="popup-game-desc" style={{whiteSpace: 'pre-line', marginTop: 12}}>{descModal.desc || '소개가 없습니다.'}</div>
+        <div className="popup-game-creator">
+          {Array.isArray(descModal.creator)
+            ? `제작자: ${descModal.creator.join(', ')}`
+            : descModal.creator
+            ? `제작자: ${descModal.creator}`
+            : ''}
+        </div>
+        {/* 장르 추가 */}
+        <div className="popup-game-genre">
+          장르: {descModal.genre || '정보 없음'}
+        </div>
+        <div className="popup-game-desc" style={{whiteSpace: 'pre-line', marginTop: 12}}>
+          {descModal.desc || '소개가 없습니다.'}
+        </div>
+        {/* 게임 스샷 목록 추가 */}
+        <div className="popup-game-screenshots" style={{ marginTop: 10 }}>
+          <div>게임 스샷:</div>
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 4 }}>
+            {(descModal.screenshots && descModal.screenshots.length > 0)
+              ? descModal.screenshots.map((src, idx) => (
+                  <img
+                    key={idx}
+                    src={src}
+                    alt={`screenshot-${idx + 1}`}
+                    style={{ width: 80, height: 60, objectFit: 'cover', borderRadius: 4, border: '1px solid #eee' }}
+                    onError={e => { e.target.onerror = null; e.target.src = '/gammaruCharacter.png'; }}
+                  />
+                ))
+              : <span style={{ color: '#bbb' }}>스샷 없음</span>
+            }
+          </div>
+        </div>
+        {/* 게임 README 내용 추가 */}
+        <div className="popup-game-readme" style={{ marginTop: 10 }}>
+          <div>게임 README:</div>
+          <pre style={{ background: '#f8f8f8', padding: 8, borderRadius: 4, maxHeight: 200, overflowY: 'auto', fontSize: 13 }}>
+            {descModal.readme || 'README 정보 없음'}
+          </pre>
+        </div>
+        {/* 다운로드 버튼 추가 */}
+        <div className="popup-game-download" style={{ marginTop: 10 }}>
+          <a
+            href={descModal.downloadUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="download-btn"
+            style={{
+              pointerEvents: isValidUrl(descModal.downloadUrl) ? 'auto' : 'none',
+              opacity: isValidUrl(descModal.downloadUrl) ? 1 : 0.5,
+            }}
+            tabIndex={isValidUrl(descModal.downloadUrl) ? 0 : -1}
+            aria-disabled={!isValidUrl(descModal.downloadUrl)}
+          >
+            {isValidUrl(descModal.downloadUrl) ? '다운로드' : '파일 없음'}
+          </a>
+        </div>
       </div>
     </PopupModal>
   </div>
