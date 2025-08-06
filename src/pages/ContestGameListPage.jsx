@@ -60,52 +60,67 @@ function ContestGameListPage() {
         <div style={{color: '#bbb', textAlign: 'center', fontSize: '1.1rem', marginTop: 40}}>등록된 게임이 없습니다.</div>
       ) : (
         <div className="games-grid">
-          {games.map(game => (
-            <div
-              key={game.id}
-              className="game-card game-card-clickable"
-              onClick={e => {
-                setDescModal({
-                  open: true,
-                  title: game.title,
-                  team: game.team,
-                  creator: game.creator,
-                  downloadUrl: game.downloadUrl,
-                  desc: game.description
-                });
-              }}
-              tabIndex={0}
-              role="button"
-            >
-              <img
-                src={(game.imageUrl)?game.imageUrl:"null"}
-                alt={game.title}
-                className="game-image"
-                onError={e => { e.target.onerror = null; e.target.src = '/gammaruCharacter.png'; }}
-              />
-              <div className="game-info">
-                <h3>
-                  {game.rank === 1 && <span className="medal-badge gold">🥇</span>}
-                  {game.rank === 2 && <span className="medal-badge silver">🥈</span>}
-                  {game.rank === 3 && <span className="medal-badge bronze">🥉</span>}
-                  {game.title}
-                </h3>
-                <div className="game-team">{game.team || '팀명 없음'}</div>
-                <a
-                  href={game.downloadUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="download-btn"
-                  style={{ pointerEvents: isValidUrl(game.downloadUrl) ? 'auto' : 'none', opacity: isValidUrl(game.downloadUrl) ? 1 : 0.5 }}
-                  tabIndex={isValidUrl(game.downloadUrl) ? 0 : -1}
-                  aria-disabled={!isValidUrl(game.downloadUrl)}
-                  onClick={e => { if (!isValidUrl(game.downloadUrl)) e.preventDefault(); e.stopPropagation(); }}
-                >
-                  {isValidUrl(game.downloadUrl) ? '다운로드' : '파일 없음'}
-                </a>
+          {games.map(game => {
+            return (
+              <div
+                key={game.id}
+                className={`game-card game-card-clickable`}
+                onClick={e => {
+                  setDescModal({
+                    open: true,
+                    title: game.title,
+                    team: game.team,
+                    creator: game.creator,
+                    downloadUrl: game.downloadUrl,
+                    desc: game.description,
+                    genre: game.genre,
+                    screenShots: game.screenShots || [],
+                    readme: game.readme
+                  });
+                }}
+                tabIndex={0}
+                role="button"
+                style={{
+                  pointerEvents: 'auto',
+                  opacity: 1
+                }}
+              >
+                <img
+                  src={game.imageUrl ? game.imageUrl : "/gammaruCharacter.png"}
+                  alt={game.title || '게임 정보 없음'}
+                  className="game-image"
+                  onError={e => { e.target.onerror = null; e.target.src = '/gammaruCharacter.png'; }}
+                />
+                <div className="game-info">
+                  <h3>
+                    {game.rank === 1 && <span className="medal-badge gold">🥇</span>}
+                    {game.rank === 2 && <span className="medal-badge silver">🥈</span>}
+                    {game.rank === 3 && <span className="medal-badge bronze">🥉</span>}
+                    {game.title || '게임 정보 없음'}
+                  </h3>
+                  <div className="game-team">{game.team || '팀명 없음'}</div>
+                  <a
+                    href={game.downloadUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="download-btn"
+                    style={{
+                      pointerEvents: isValidUrl(game.downloadUrl) ? 'auto' : 'none',
+                      opacity: isValidUrl(game.downloadUrl) ? 1 : 0.5
+                    }}
+                    tabIndex={isValidUrl(game.downloadUrl) ? 0 : -1}
+                    aria-disabled={!isValidUrl(game.downloadUrl)}
+                    onClick={e => {
+                      if (!isValidUrl(game.downloadUrl)) e.preventDefault();
+                      e.stopPropagation();
+                    }}
+                  >
+                    {isValidUrl(game.downloadUrl) ? '다운로드' : '파일 없음'}
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
     <PopupModal open={descModal.open} onClose={() => setDescModal({ open: false, desc: '' })}>
@@ -128,19 +143,34 @@ function ContestGameListPage() {
         </div>
         {/* 게임 스샷 목록 추가 */}
         <div className="popup-game-screenshots" style={{ marginTop: 10 }}>
-          <div>게임 스샷:</div>
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 4 }}>
-            {(descModal.screenshots && descModal.screenshots.length > 0)
-              ? descModal.screenshots.map((src, idx) => (
+          <div>게임 스크린샷:</div>
+          <div
+            style={{
+              display: 'flex',
+              gap: 12,
+              flexWrap: 'wrap',
+              marginTop: 4,
+              justifyContent: 'center', // 가운데 정렬 추가
+              alignItems: 'center'      // 세로 가운데 정렬 추가
+            }}
+          >
+            {(descModal.screenShots && descModal.screenShots.length > 0)
+              ? descModal.screenShots.map((src, idx) => (
                   <img
                     key={idx}
                     src={src}
                     alt={`screenshot-${idx + 1}`}
-                    style={{ width: 80, height: 60, objectFit: 'cover', borderRadius: 4, border: '1px solid #eee' }}
+                    style={{
+                      width: 200,
+                      height: 140,
+                      objectFit: 'cover',
+                      borderRadius: 8,
+                      border: '1px solid #eee'
+                    }}
                     onError={e => { e.target.onerror = null; e.target.src = '/gammaruCharacter.png'; }}
                   />
                 ))
-              : <span style={{ color: '#bbb' }}>스샷 없음</span>
+              : <span style={{ color: '#bbb' }}>스크린샷 없음</span>
             }
           </div>
         </div>
@@ -174,4 +204,4 @@ function ContestGameListPage() {
   )
 }
 
-export default ContestGameListPage 
+export default ContestGameListPage

@@ -66,6 +66,19 @@
   transform: translateY(-3px) scale(1.03);
 }
 
+.game-list-contest-link {
+  min-width: 340px;
+  max-width: 480px;
+  box-sizing: border-box;
+}
+
+.game-list-contest-link.disabled,
+.game-list-contest-btn.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 @media (max-width: 768px) {
   .game-list-year-section {
     flex-direction: column !important;
