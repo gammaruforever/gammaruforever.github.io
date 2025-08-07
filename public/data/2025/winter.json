@@ -20,7 +20,7 @@
         "description": "원하는 캐릭터를 골라 실시간으로 팀 대전을 즐겨보세요.",
         "imageUrl": "https://lh3.googleusercontent.com/d/1D91KN2l5dgFk0PReOWaaUjfUdVAiGqzG",
         "genre": "2D Multiplay Character Platformer",
-        "screenShots": [],
+        "screenShots": ["https://lh3.googleusercontent.com/d/1T678B6hXl3wYQ-zbcCUtIrL6P8PvnvNa", "https://lh3.googleusercontent.com/d/1QO8CigBcWqfD99bwFa5KxJd2JTopX3a8"],
         "downloadUrl": "https://drive.google.com/file/d/1Dy2Kq78-6UZpKuMXmJCD31CkG5dl4eX5/view?usp=drive_link",
         "createdAt": "2025-07-29T12:00:00Z",
         "rank": 2
@@ -30,10 +30,10 @@
         "title": "Arcana Against",
         "team": "황현진",
         "creator": ["22기 황현진"],
-        "description": "",
+        "description": "운명의 신들에 저항하는 바보(The Fool)의 반란을 다루는 모험!",
         "imageUrl": "https://lh3.googleusercontent.com/d/1SF-b7cN4CK4WU1inwGL9OG8XcDGXbGy4",
-        "genre": "",
-        "screenShots": [],
+        "genre": "Bullet Hell Shooting",
+        "screenShots": ["https://lh3.googleusercontent.com/d/1j6pPHb7WOsoMiiSgBT9VumcqQcqmnKmt", "https://lh3.googleusercontent.com/d/1UdCJH8aidQ9j9sHdfILZ_WoCmuXCM88V"],
         "downloadUrl": "https://drive.google.com/file/d/1Xf4w6c2m12rL-LeoYKLGOd07bBOdbbTY/view?usp=drive_link",
         "createdAt": "2025-07-29T12:00:00Z",
         "rank": 3
