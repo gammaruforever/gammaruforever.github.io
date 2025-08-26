@@ -200,7 +200,8 @@ function ContestGameListPage() {
           <div>게임 README:</div>
           <pre
             style={{
-              background: '#f8f8f8',
+              color: '#f8f8f8',
+              background: '#333333',
               padding: 8,
               borderRadius: 4,
               maxHeight: 200,
