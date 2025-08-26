@@ -29,6 +29,25 @@ function ContestGameListPage() {
   const [loading, setLoading] = useState(true)
   const [descModal, setDescModal] = useState({ open: false, desc: '' });
 
+  // README 내용 fetch 함수
+  const fetchReadme = async (fileName) => {
+    if (!fileName) {
+      return 'README 파일 정보가 없습니다.'
+    }
+    try {
+      const res = await fetch(`/data/${year}/README/${fileName}`)
+
+      if (!res.ok) return 'README 파일을 찾을 수 없습니다.'
+
+      // const buffer = await res.arrayBuffer()
+      // const text = new TextDecoder('utf-8').decode(buffer)
+
+      return res.text()
+    } catch {
+      return 'README 파일을 불러오는 중 오류가 발생했습니다.'
+    }
+  };
+
   useEffect(() => {
     setGames([])
     setError(null)
@@ -65,7 +84,9 @@ function ContestGameListPage() {
               <div
                 key={game.id}
                 className={`game-card game-card-clickable`}
-                onClick={e => {
+                onClick={async (e) => {
+                  console.log(game.README);
+                  const readmeContent = await fetchReadme(game.README);
                   setDescModal({
                     open: true,
                     title: game.title,
@@ -75,7 +96,7 @@ function ContestGameListPage() {
                     desc: game.description,
                     genre: game.genre,
                     screenShots: game.screenShots || [],
-                    readme: game.readme
+                    readme: readmeContent
                   });
                 }}
                 tabIndex={0}
@@ -177,7 +198,18 @@ function ContestGameListPage() {
         {/* 게임 README 내용 추가 */}
         <div className="popup-game-readme" style={{ marginTop: 10 }}>
           <div>게임 README:</div>
-          <pre style={{ background: '#f8f8f8', padding: 8, borderRadius: 4, maxHeight: 200, overflowY: 'auto', fontSize: 13 }}>
+          <pre
+            style={{
+              background: '#f8f8f8',
+              padding: 8,
+              borderRadius: 4,
+              maxHeight: 200,
+              overflowY: 'auto',
+              fontSize: 13,
+              whiteSpace: 'pre-wrap',   /* 줄바꿈은 보존하고 자동으로 줄바꿈(wrap) 처리 */
+              wordBreak: 'break-word'   /* 긴 단어도 줄바꿈 처리 */
+            }}
+          >
             {descModal.readme || 'README 정보 없음'}
           </pre>
         </div>
