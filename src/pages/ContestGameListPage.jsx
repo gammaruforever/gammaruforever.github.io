@@ -85,7 +85,6 @@ function ContestGameListPage() {
                 key={game.id}
                 className={`game-card game-card-clickable`}
                 onClick={async (e) => {
-                  console.log(game.README);
                   const readmeContent = await fetchReadme(game.README);
                   setDescModal({
                     open: true,
@@ -117,6 +116,9 @@ function ContestGameListPage() {
                     {game.rank === 1 && <span className="medal-badge gold">🥇</span>}
                     {game.rank === 2 && <span className="medal-badge silver">🥈</span>}
                     {game.rank === 3 && <span className="medal-badge bronze">🥉</span>}
+                    {game.rank === "plan" && <span className="medal-badge">📝</span>}
+                    {game.rank === "dev" && <span className="medal-badge">🖥️</span>}
+                    {game.rank === "pop" && <span className="medal-badge">🎉</span>}
                     {game.title || '게임 정보 없음'}
                   </h3>
                   <div className="game-team">{game.team || '팀명 없음'}</div>

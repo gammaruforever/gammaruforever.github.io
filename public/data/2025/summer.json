@@ -15,7 +15,7 @@
       "https://lh3.googleusercontent.com/d/1nXEO1XT0PXPmr2Y4ivsOCtPsDeMo3j5r",
       "https://lh3.googleusercontent.com/d/1EhQrYgxsbbc3xRQF1z8Vwe2QzkmNSBfF"
     ],
-    "downloadUrl": "https://drive.google.com/drive/folders/1IPTRIGzEita2WiXEcFcCwrqfEj77WmlO?usp=drive_link",
+    "downloadUrl": "https://drive.google.com/file/d/1SsfMCpHrnTEVTlEOkShZAbcNwELQrU6-/view?usp=drive_link",
     "README": "cat.txt",
     "createdAt": "2025-08-24T12:00:00Z",
     "rank": 1
@@ -70,7 +70,7 @@
     "downloadUrl": "https://drive.google.com/drive/folders/1tUAS8Af4e7WPhUS6sGDLI94ITWmQwZC5?usp=drive_link",
     "README": "isolation.txt",
     "createdAt": "2025-08-24T12:00:00Z",
-    "rank": 4
+    "rank": "plan"
   },
   {
     "id": 8,
@@ -87,7 +87,7 @@
     "downloadUrl": "https://drive.google.com/drive/folders/1RDVRO5I0iEgc_7nBUxKJqfrZ6Y2fKAtG?usp=drive_link",
     "README": "manareload.txt",
     "createdAt": "2025-08-24T12:00:00Z",
-    "rank": 4
+    "rank": "pop"
   },
   {
     "id": 7,
@@ -106,7 +106,7 @@
     "downloadUrl": "https://drive.google.com/file/d/1h8rLKo809Ss_lzQShYb41s-_6W6BaquD/view?usp=drive_link",
     "README": "ship.txt",
     "createdAt": "2025-08-24T12:00:00Z",
-    "rank": 4
+    "rank": "dev"
   },
   {
     "id": 1,
