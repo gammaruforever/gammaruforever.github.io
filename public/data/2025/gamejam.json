@@ -15,7 +15,7 @@
     "downloadUrl": "https://drive.google.com/file/d/1uS3JhwA9EQ71ZiYIgANeGpwuXd72FIFa/view?usp=drive_link",
     "createdAt": "2025-12-30T12:00:00Z",
     "rank": 1,
-    "readme": "footgame.txt"
+    "README": "footgame.txt"
   },
   {
     "id": 2,
@@ -35,7 +35,7 @@
     "downloadUrl": "https://drive.google.com/file/d/13O9kyVbm5nC_yyEvGw9DBIKQr2gIeevB/view?usp=drive_link",
     "createdAt": "2025-12-30T12:00:00Z",
     "rank": 2,
-    "readme": "prisoncollage.txt"
+    "README": "prisoncollage.txt"
   },
   {
     "id": 3,
@@ -52,7 +52,7 @@
     "downloadUrl": "https://drive.google.com/file/d/1-luAL7FTV_ZHpKjr08lyncChhf3tyDjj/view?usp=drive_link",
     "createdAt": "2025-12-30T12:00:00Z",
     "rank": 3,
-    "readme": "iwannaminer.txt"
+    "README": "iwannaminer.txt"
   },
   {
     "id": 4,
@@ -69,7 +69,7 @@
     "downloadUrl": "https://drive.google.com/file/d/1DOrzKWZuENsH9OtKzuIm69tnY47STutz/view?usp=drive_link",
     "createdAt": "2025-12-30T12:00:00Z",
     "rank": "pop",
-    "readme": "pinata.txt"
+    "README": "pinata.txt"
   },
   {
     "id": 5,
@@ -88,7 +88,7 @@
     "downloadUrl": "https://drive.google.com/file/d/1rvtnnZ5hUwtFvsr1d6WWMZ9tFqeyV6Bn/view?usp=drive_link",
     "createdAt": "2025-12-30T12:00:00Z",
     "rank": 0,
-    "readme": "25.txt"
+    "README": "25.txt"
   },
   {
     "id": 6,
@@ -101,7 +101,7 @@
     "downloadUrl": "https://drive.google.com/file/d/1p-wbMG9bW2KIaL3J_VUU7c_QO5kQgSRV/view?usp=drive_link",
     "createdAt": "2025-12-30T12:00:00Z",
     "rank": 0,
-    "readme": "potato.txt"
+    "README": "potato.txt"
   },
   {
     "id": 7,
@@ -114,7 +114,7 @@
     "downloadUrl": "https://drive.google.com/file/d/1OcwWmz9JXFlMidVIdTq8Df2rjk0WDMnO/view?usp=drive_link",
     "createdAt": "2025-12-30T12:00:00Z",
     "rank": 0,
-    "readme": "pigment.txt"
+    "README": "pigment.txt"
   },
   {
     "id": 8,
@@ -127,7 +127,7 @@
     "downloadUrl": "https://drive.google.com/file/d/1gCzX8WTI2JvDN4c_CzHModw53wq_ey3Q/view?usp=drive_link",
     "createdAt": "2025-12-30T12:00:00Z",
     "rank": 0,
-    "readme": "escapeF.txt"
+    "README": "escapeF.txt"
   },
   {
     "id": 9,
@@ -140,7 +140,7 @@
     "downloadUrl": "https://drive.google.com/file/d/11OuBGNOmvs7gdv5iz4n6Bd1HsoLEsVF3/view?usp=drive_link",
     "createdAt": "2025-12-30T12:00:00Z",
     "rank": 0,
-    "readme": "revenant.txt"
+    "README": "revenant.txt"
   },
   {
     "id": 10,
@@ -156,6 +156,6 @@
     "downloadUrl": "https://drive.google.com/file/d/173tw-GvlzC92QoKgI9xuGpeLh3x-Oswl/view?usp=drive_link",
     "createdAt": "2025-12-30T12:00:00Z",
     "rank": 0,
-    "readme": "teleport.txt"
+    "README": "teleport.txt"
   }
 ]
