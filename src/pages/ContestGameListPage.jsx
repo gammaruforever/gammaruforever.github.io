@@ -69,7 +69,7 @@ function ContestGameListPage() {
         <button className="mainpage-top-btn">공모전 전체 목록</button>
       </Link>
       <h1 style={{textAlign: 'center', marginBottom: 40}}>
-        {year}년 {season === 'summer' ? '여름공모전' : '겨울공모전'} 게임 리스트
+        {year}년 {season === 'summer' ? '여름공모전' : season === 'winter' ? '겨울공모전' : '게임잼'} 게임 리스트
       </h1>
       {loading ? (
         <div style={{color: '#bbb', textAlign: 'center', fontSize: '1.1rem', marginTop: 40}}>로딩 중...</div>
