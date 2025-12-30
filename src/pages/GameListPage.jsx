@@ -7,6 +7,7 @@ const YEARS = Array.from({length: RECENT_YEAR-2016+1}, (_, i) => RECENT_YEAR - i
 const SEASONS = [
   { key: 'summer', label: '여름공모전' },
   { key: 'winter', label: '겨울공모전' },
+  { key: 'gamejam', label: '게임잼' },
 ];
 
 function GameListPage() {
@@ -45,22 +46,20 @@ function GameListPage() {
           <div className="game-list-year-section">
             {SEASONS.map(season => {
               const isEnabled = available[`${year}_${season.key}`];
-              return (
+              return isEnabled ? (
                 <Link
                   key={season.key}
-                  to={isEnabled ? `/games/${year}/${season.key}` : '#'}
-                  className={`game-list-contest-link${!isEnabled ? ' disabled' : ''}`}
-                  tabIndex={isEnabled ? 0 : -1}
-                  aria-disabled={!isEnabled}
+                  to={`/games/${year}/${season.key}`}
+                  className="game-list-contest-link"
                 >
-                  <div className={`game-list-contest-btn${!isEnabled ? ' disabled' : ''}`}>
+                  <div className="game-list-contest-btn">
                     <h3>{season.label}</h3>
                     <div style={{color: '#bbb', textAlign: 'center', fontSize: '0.95rem'}}>
-                      {isEnabled ? '출품작 보기' : '데이터 없음'}
+                      출품작 보기
                     </div>
                   </div>
                 </Link>
-              );
+              ) : null;
             })}
           </div>
         </div>
